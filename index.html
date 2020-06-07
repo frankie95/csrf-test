@@ -1,0 +1,15 @@
+<form method="POST" action="/" id="deleteForm">
+    <label>delete:</label>
+    <input name="delete" />
+    <br />
+    <input type="submit" value="delete">
+</form>
+
+<script>
+    document.cookie = "_csrf=some random string"
+    var input = document.createElement("input");
+    input.setAttribute("type", "hidden");
+    input.setAttribute("name", "_csrf");
+    input.setAttribute("value", "some random string");
+    document.getElementById("deleteForm").appendChild(input);
+</script>
